@@ -1,0 +1,19 @@
+<% if user_signed_in? %>
+    <a href="/my_page">마이페이지</a>
+    <%= current_user.email %>님 안녕하세요!!
+    <%= link_to "로그아웃", destroy_user_session_path, method: :delete %>
+<% else %>
+    <%= link_to "로그인", new_user_session_path %>
+<% end %>
+<hr>
+<a href="/posts/new">새 글 쓰기</a>
+<hr>
+
+<% @posts.each do |post| %>
+    title : <%= post.title %>
+    content : <%= post.content %>
+    <a href="/posts/<%= post.id %>/show">보기</a>
+    <a href="/posts/<%= post.id %>/edit">수정</a>
+    <a href="/posts/<%= post.id %>/destroy">삭제</a>
+    <hr>
+<% end %>

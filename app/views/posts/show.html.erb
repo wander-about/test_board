@@ -1,0 +1,13 @@
+<%= @post.id %> 의 글
+<hr>
+title : <%= @post.title %>
+<hr>
+content : <%= @post.content %>
+<hr>
+좋아요 수 : <%#= @post.likes.count %>
+<hr>
+
+<a href="/posts/<%= @post.id %>/likes">좋아요</a>
+
+<a href="/posts/index">리스트로 이동</a>
+
