@@ -14,7 +14,6 @@ class PostsController < ApplicationController
   end
 
   def create
-    
     @post = Post.new
 
     @post.title = params[:title]
@@ -23,7 +22,7 @@ class PostsController < ApplicationController
 
     @post.save
     #post = Post.create(title: params[:title], content: params[:content], user_id: current_user.id)
-    byebug
+
     redirect_to "/posts/#{@post.id}/show"
   end
 
