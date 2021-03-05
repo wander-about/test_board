@@ -10,6 +10,8 @@ class CommentsController < ApplicationController
 
     comment.save
 
+		#comment = Comment.create(body: params[:body], post_id: post.id, user_id: current_user.id)
+
     redirect_to request.referrer
   end
 end
