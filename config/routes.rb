@@ -13,4 +13,5 @@ Rails.application.routes.draw do
 
   post "posts/:id/comments" => "comments#create", as: "posts_comments_create"
   get "posts/:id/post_likes" => "post_likes#create"
+  get "comments/:id/comment_likes" => "comment_likes#create"
 end
