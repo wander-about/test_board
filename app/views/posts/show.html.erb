@@ -4,9 +4,10 @@ title : <%= @post.title %>
 <hr>
 content : <%= @post.content %>
 <hr>
-좋아요 수 : <%#= @post.likes.count %>
+좋아요 수 : <%= @post.post_likes.count %>
 <hr>
-
+<a href="/posts/<%= @post.id %>/post_likes">좋아요</a>
+<br>
 <a href="/posts/index">리스트로 이동</a>
 <br>
 <br>
@@ -17,7 +18,7 @@ content : <%= @post.content %>
 	<button type="submit">제출</button>
 </form>
 <hr>
-
+<!-- 왜 액션을 "posts/<%#= post.id %>/comments" 넘기면 url주소가 posts/show/posts/id/comments로 넘어가지??? -->
 댓글 보기
 <hr>
 <% Comment.where(post_id: @post.id).each do |comment| %>

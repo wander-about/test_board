@@ -4,7 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  #dependent: :destroy 의미를 모름
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
+  has_many :post_likes, dependent: :destroy
+
 end

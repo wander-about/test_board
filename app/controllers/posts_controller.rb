@@ -1,5 +1,4 @@
 class PostsController < ApplicationController
-  #new, create, show는 유저만 사용가능
   before_action :authenticate_user!, only: [:new, :create]
 
   def index

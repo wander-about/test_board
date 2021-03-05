@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  get 'posts/index'
-  get 'posts/new'
-  get 'posts/show'
-  get 'posts/edit'
   devise_for :users
 
   root "posts#index"
@@ -16,5 +12,5 @@ Rails.application.routes.draw do
   get "posts/:id/destroy" => "posts#destroy"
 
   post "posts/:id/comments" => "comments#create", as: "posts_comments_create"
-
+  get "posts/:id/post_likes" => "post_likes#create"
 end
