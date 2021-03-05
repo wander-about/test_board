@@ -11,3 +11,18 @@ content : <%= @post.content %>
 
 <a href="/posts/index">리스트로 이동</a>
 
+댓글 작성하기
+<form action="<%= posts_comments_create_path(@post) %>" method="POST">
+	<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+	댓글 : <input type="text" name="body">
+	<button type="submit">제출</button>
+</form>
+<hr>
+
+댓글 보기
+<hr>
+<% Comment.where(post_id: @post.id).each do |comment| %>
+	작성자 : <%= comment.user.email %>
+	댓글 : <%= comment.body %>
+	<hr>
+<% end %>

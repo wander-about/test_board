@@ -15,4 +15,6 @@ Rails.application.routes.draw do
   post "posts/:id/update" => "posts#update"
   get "posts/:id/destroy" => "posts#destroy"
 
+  post "posts/:id/comments" => "comments#create", as: "posts_comments_create"
+
 end
