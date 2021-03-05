@@ -50,7 +50,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem "any_login"
+
+  gem "any_login" #실행이 되지 않는다!
 end
 
 group :test do

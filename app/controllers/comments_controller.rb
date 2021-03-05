@@ -11,6 +11,7 @@ class CommentsController < ApplicationController
 
 		#comment = Comment.create(body: params[:body], post_id: post.id, user_id: current_user.id)
 
-    redirect_to request.referrer
+    #redirect_to request.referrer
+    redirect_back(fallback_location: root_path)
   end
 end
