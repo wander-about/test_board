@@ -1,6 +1,5 @@
 class PostLikesController < ApplicationController
 	# REVIEW : 3
-	# REVIEW : 4 => back cache
 	before_action :authenticate_user!, only: [:create]
 	def create
 		post = Post.find(params[:id])
