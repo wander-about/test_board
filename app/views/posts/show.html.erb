@@ -4,6 +4,8 @@ title : <%= @post.title %>
 <hr>
 content : <%= @post.content %>
 <hr>
+<img src="<%= @post.image_url %>" alt="" class="">
+<hr>
 좋아요 수 : <%= @post.post_likes.count %>
 <hr>
 <a href="/posts/<%= @post.id %>/post_likes">좋아요</a>

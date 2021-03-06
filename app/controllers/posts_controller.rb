@@ -18,10 +18,11 @@ class PostsController < ApplicationController
     @post.title = params[:title]
     @post.content = params[:content]
     @post.user_id = current_user.id
+    @post.image = params[:image]
 
     @post.save
-    #post = Post.create(title: params[:title], content: params[:content], user_id: current_user.id)
-
+    #post = Post.create(title: params[:title], content: params[:content], user_id: current_user.id, image: params[:image])
+    byebug
     redirect_to "/posts/#{@post.id}/show"
   end
 
