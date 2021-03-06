@@ -1,4 +1,5 @@
 class Post < ApplicationRecord
+  # REVIEW : 3 => validates
   belongs_to :user
 
   has_many :comments, dependent: :destroy

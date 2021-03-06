@@ -1,10 +1,11 @@
+<%# REVIEW : 1  %>
 <form action="/posts/create" method="POST">
     <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
     글 : <input type="text" name="title">
     <br>
     내용 : <textarea name="content"></textarea>
     <br>
-    <input type="file" name="image">
+    <input type="file" accept="image/*" name="image">
     <button type="submit">제출</button>
 </form>
 <a href="/posts/index">리스트로 이동</a>

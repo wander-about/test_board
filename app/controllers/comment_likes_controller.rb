@@ -1,4 +1,6 @@
 class CommentLikesController < ApplicationController
+	# REVIEW : 3
+	# REVIEW : 4
 	before_action :authenticate_user!, only: [:create]
 
 	def create

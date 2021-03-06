@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   root "posts#index"
 
+  # REVIEW: 3
   get "posts/index" => "posts#index"
   get "posts/new" => "posts#new"
   post "posts/create" => "posts#create"

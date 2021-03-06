@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  # REVIEW : 1
   before_action :authenticate_user!, only: [:new, :create]
 
   def index
@@ -12,6 +13,7 @@ class PostsController < ApplicationController
   def new
   end
 
+  # REVIEW : 3
   def create
     @post = Post.new
 
@@ -22,10 +24,11 @@ class PostsController < ApplicationController
 
     @post.save
     #post = Post.create(title: params[:title], content: params[:content], user_id: current_user.id, image: params[:image])
-    byebug
+
     redirect_to "/posts/#{@post.id}/show"
   end
 
+  # REVIEW : 1
   def edit
     @post = Post.find(params[:id])
   end

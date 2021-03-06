@@ -1,9 +1,11 @@
 class CommentsController < ApplicationController
+  # REVIEW : 1
   def create
 		post = Post.find(params[:id])
 
     comment = Comment.new
     comment.body = params[:body]
+    # REVIEW : 3
     comment.post_id = post.id
 		comment.user_id = current_user.id
 
